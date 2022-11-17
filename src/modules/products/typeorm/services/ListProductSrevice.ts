@@ -9,10 +9,6 @@ class ListProductService {
     const productsRepository = getCustomRepository(ProductRepository);
     const products = await productsRepository.find();
 
-    if (!products) {
-      throw new AppError('There is no products');
-    }
-
     return products;
   }
 }
